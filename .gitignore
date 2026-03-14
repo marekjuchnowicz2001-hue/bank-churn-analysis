@@ -1,0 +1,16 @@
+# PyCharm
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# environment files
+.env
+
+# system files
+.DS_Store
+Thumbs.db
