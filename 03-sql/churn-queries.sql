@@ -1,0 +1,89 @@
+--Bank Churn Analysis (SQL) Project: Bank Churn Analysis
+
+-- 1. Overall churn rate
+-- SELECT
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn;
+
+-- 2. Churn by geography
+-- SELECT
+--     Geography,
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn
+-- GROUP BY Geography
+-- ORDER BY churn_rate_percent DESC;
+
+-- 3. Churn by activity status
+-- SELECT
+--     IsActiveMember,
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn
+-- GROUP BY IsActiveMember
+-- ORDER BY churn_rate_percent DESC;
+
+-- 4. Churn by number of products
+-- SELECT
+--     NumOfProducts,
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn
+-- GROUP BY NumOfProducts
+-- ORDER BY NumOfProducts;
+
+-- 5. Churn by age group
+-- SELECT
+--     CASE
+--         WHEN Age < 30 THEN 'Under 30'
+--         WHEN Age BETWEEN 30 AND 39 THEN '30-39'
+--         WHEN Age BETWEEN 40 AND 49 THEN '40-49'
+--         WHEN Age BETWEEN 50 AND 59 THEN '50-59'
+--         ELSE '60+'
+--     END AS age_group,
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn
+-- GROUP BY age_group
+-- ORDER BY churn_rate_percent DESC;
+
+-- 6. Churn by gender
+-- SELECT
+--     Gender,
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn
+-- GROUP BY Gender
+-- ORDER BY churn_rate_percent DESC;
+
+-- 7. Churn by balance group
+-- SELECT
+--     CASE
+--         WHEN Balance = 0 THEN '0'
+--         WHEN Balance BETWEEN 1 AND 50000 THEN '1-50k'
+--         WHEN Balance BETWEEN 50001 AND 100000 THEN '50k-100k'
+--         ELSE '100k+'
+--     END AS balance_group,
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn
+-- GROUP BY balance_group
+-- ORDER BY churn_rate_percent DESC;
+
+-- 8. Churn by tenure
+-- SELECT
+--     Tenure,
+--     COUNT(*) AS total_customers,
+--     SUM(Exited) AS churned_customers,
+--     ROUND(AVG(Exited) * 100, 2) AS churn_rate_percent
+-- FROM churn
+-- GROUP BY Tenure
+-- ORDER BY Tenure;
